@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptaciones</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="./view/img/hacker.png">
+    <link rel="stylesheet" href="./view/css/reset.css">
+    <link rel="stylesheet" href="./view/css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-    <script src="index.js"></script>
 </head>
 <body>
-    
+    <header>
+        <img class="logo" src="./view/img/Logo.svg" alt="Logo de alura">
+    </header>
+    <main>
+        <section class="texto-a-resolver">
+            <textarea class="textoEncrip" id="textoAEncriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <p class="text-info">Solo letras minúsculas y sin acentos.</p>
+                <div class="botones">
+                    <button class="btn cifrar" id="btnCifrar" onclick="encriptar();">Encriptar</button>
+                    <button class="btn descifrar" id="btnDescifrar" onclick="desencriptar();">Desencriptar</button>
+                    <button class="btn descifrar hidden" id="btnCancelar" onclick="cancelar();">Cancelar</button>
+                </div>
+            </div>
+        </section>
+        <section class="texto-resuelto">
+            <div class="mostrar">
+                <p class="textToShow hidden" id="textToShow"></p>
+                <section class="withoutMessage" id="withoutMessage">
+                    <img class="muñeco" src="./view/img/Muñeco.svg" alt="muñeco buscando">
+                    <p class="messageNotFound">Ningún mensaje fue encontrado</p>
+                    <p class="messageNotFound">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </section>
+            </div>
+            <div class="separacioncopiar">
+                <button disabled class="btn copiar" id="btnCopiar" onclick="copiar();">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Desarrollado por: Christian Daniel Campaña Díaz</p>
+        <p>©Derechos Reservados 2024.</p>
+    </footer>
+    <script src="./view/js/index.js"></script>
 </body>
 </html>

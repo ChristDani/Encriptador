@@ -1,0 +1,168 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background: #F3F5FC;
+}
+
+header {
+    width: 100%;
+    height: 7.5vh;
+}
+
+.logo {
+    width: 120px;
+    height: 48px;
+    margin: 20px 0 0 0px;
+}
+
+main {
+    width: 90%;
+    height: 85vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+.texto-a-resolver, .texto-resuelto {
+    display: inline-block;
+    height: 100%;
+}
+
+.texto-a-resolver {
+    width: 70%;
+}
+
+.texto-resuelto {
+    width: 30%;
+}
+
+.textoEncrip {
+    width: 80%;
+    height: 75%;
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: none;
+    /* background: #F3F5FC; */
+    &:focus {
+        outline: none;
+    }
+}
+
+.botones {
+    height: 25%;
+}
+
+footer {
+    width: 100%;
+    height: 7.5vh;
+    text-align: center;
+}
+
+footer>p:first-child {
+    padding: 1.5em 0 0 0;
+}
+
+
+.texto-resuelto {
+    width: 35%;
+    border-radius: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px #00000014;
+}
+
+
+.text-info {
+    color: #495057;
+    width: 229px;
+    height: 18px;
+    opacity: 80%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.text-info::before {
+    content: url(../img/bi_exclamation-circle-fill.svg);
+}
+
+.btn {
+    width: 328px;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+.cifrar {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+.descifrar {
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.copiar {
+    width: 336px !important;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.muñeco {
+    width: 336px;
+    height: 304px;
+    top: 283px;
+    left: 1032px;
+}
+
+.messageNotFound {
+    width: 336px;
+    text-align: center;
+    letter-spacing: 0em;
+}
+
+.messageNotFound:first-child {
+    height: 58px;
+    color: #343A40;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 29px;
+}
+
+.messageNotFound:last-child {
+    height: 48px;
+    color: #495057;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.textToShow {
+    width: 336px;
+    height: 781px;
+    top: 72px;
+    left: 1032px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #495057;
+}
+
+.hidden {
+    display: none;
+}
