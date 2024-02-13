@@ -25,10 +25,12 @@ function encriptar() {
         changeText(1, textToChange.value);
         withoutMessage.classList.add('hidden');
         TextToShow.classList.remove('hidden');
+        btnCopiar.classList.remove('hidden');
     }
     else {
         withoutMessage.classList.remove('hidden');
         TextToShow.classList.add('hidden');
+        btnCopiar.classList.add('hidden');
     }
 }
 
@@ -38,19 +40,23 @@ function desencriptar() {
         changeText(2, textToChange.value);
         withoutMessage.classList.add('hidden');
         TextToShow.classList.remove('hidden');
+        btnCopiar.classList.remove('hidden');
     }
     else {
         withoutMessage.classList.remove('hidden');
         TextToShow.classList.add('hidden');
+        btnCopiar.classList.add('hidden');
     }
 }
 
 function copiar() {
     navigator.clipboard.writeText(TextToShow.textContent);
+    cancelar();
 }
 
 function cancelar() {
     textToChange.value = '';
     withoutMessage.classList.remove('hidden');
     TextToShow.classList.add('hidden');
+    btnCopiar.classList.add('hidden');
 }

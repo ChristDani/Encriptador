@@ -29,31 +29,98 @@ main {
 }
 
 .texto-a-resolver {
-    width: 70%;
-}
-
-.texto-resuelto {
-    width: 30%;
+    width: 65%;
 }
 
 .textoEncrip {
     width: 80%;
-    height: 75%;
-    margin: 0 auto;
+    height: 85%;
+    margin: 0 10%;
     font-size: 32px;
     font-weight: 400;
     line-height: 48px;
     letter-spacing: 0em;
     text-align: left;
     border: none;
-    /* background: #F3F5FC; */
+    background: #F3F5FC;
     &:focus {
         outline: none;
     }
 }
 
-.botones {
+.textDown {
+    height: 15%;
+}
+
+.text-info {
+    color: #495057;
+    width: 100%;
     height: 25%;
+    opacity: 80%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 30px;
+}
+
+.text-info> p {
+    padding: 0 0 0 4px;
+}
+
+.botones {
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-resuelto {
+    width: 35%;
+    border-radius: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    word-wrap: break-word;
+}
+
+.mostrar {
+    width: 95%;
+    height: 85%;
+    margin: 0 auto;
+}
+
+.textToShow {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #495057;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-wrap: balance;
+}
+
+.withoutMessage {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separacioncopiar {
+    width: 95%;
+    height: 15%;
+    margin: 0 auto;
 }
 
 footer {
@@ -64,31 +131,6 @@ footer {
 
 footer>p:first-child {
     padding: 1.5em 0 0 0;
-}
-
-
-.texto-resuelto {
-    width: 35%;
-    border-radius: 32px;
-    background: #FFFFFF;
-    box-shadow: 0px 24px 32px -8px #00000014;
-}
-
-
-.text-info {
-    color: #495057;
-    width: 229px;
-    height: 18px;
-    opacity: 80%;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-}
-
-.text-info::before {
-    content: url(../img/bi_exclamation-circle-fill.svg);
 }
 
 .btn {
@@ -102,6 +144,7 @@ footer>p:first-child {
     text-align: center;
     cursor: pointer;
     border: none;
+    margin: 20px;
 }
 
 .cifrar {
@@ -115,7 +158,7 @@ footer>p:first-child {
 }
 
 .copiar {
-    width: 336px !important;
+    width: 90%;
     color: #0A3871;
     border: 1px solid #0A3871;
 }
@@ -137,8 +180,11 @@ footer>p:first-child {
     height: 58px;
     color: #343A40;
     font-size: 24px;
-    font-weight: bold;
     line-height: 29px;
+}
+
+.p {
+    font-weight: bold;
 }
 
 .messageNotFound:last-child {
@@ -149,20 +195,80 @@ footer>p:first-child {
     line-height: 24px;
 }
 
-
-.textToShow {
-    width: 336px;
-    height: 781px;
-    top: 72px;
-    left: 1032px;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #495057;
-}
-
 .hidden {
     display: none;
+}
+
+@media screen and (max-width:1070px) {
+    main {
+        height: 1200px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .muñeco {
+        display: none;
+    }
+
+    .texto-a-resolver {
+        height: 600px;
+        width: 90%;
+        padding: 25px;
+    }
+
+    .textoEncrip {
+        height: 500px;
+    }
+
+    .texto-resuelto {
+        margin-top: 30px;
+        height: 600px;
+        width: 90%;
+    }
+
+    .mostrar {
+        height: 500px;
+    }
+
+    .separacioncopiar {
+        width: 100%;
+        height: 100px;
+    }
+
+    .copiar {
+        width: 70%;
+        height: 50px;
+        padding: 0;
+        margin: 15px 15%;
+    }
+
+    footer {
+        margin: 100px 0 60px 0;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .botones {
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .separacioncopiar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 70%;
+        height: 50px;
+        padding: 0;
+        margin: 5px;
+    }
+
+    .texto-resuelto {
+        width: 98%;
+    }
 }

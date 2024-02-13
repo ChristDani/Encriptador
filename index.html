@@ -16,26 +16,28 @@
     <main>
         <section class="texto-a-resolver">
             <textarea class="textoEncrip" id="textoAEncriptar" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-            <div>
-                <p class="text-info">Solo letras minúsculas y sin acentos.</p>
+            <div class="textDown">
+                <div class="text-info">
+                    <img src="./view/img/bi_exclamation-circle-fill.svg" alt="signo de alerta">
+                    <p>Solo letras minúsculas y sin acentos.</p>
+                </div>
                 <div class="botones">
                     <button class="btn cifrar" id="btnCifrar" onclick="encriptar();">Encriptar</button>
                     <button class="btn descifrar" id="btnDescifrar" onclick="desencriptar();">Desencriptar</button>
-                    <button class="btn descifrar hidden" id="btnCancelar" onclick="cancelar();">Cancelar</button>
                 </div>
             </div>
         </section>
         <section class="texto-resuelto">
             <div class="mostrar">
                 <p class="textToShow hidden" id="textToShow"></p>
-                <section class="withoutMessage" id="withoutMessage">
+                <div class="withoutMessage" id="withoutMessage">
                     <img class="muñeco" src="./view/img/Muñeco.svg" alt="muñeco buscando">
-                    <p class="messageNotFound">Ningún mensaje fue encontrado</p>
+                    <p class="messageNotFound p">Ningún mensaje fue encontrado</p>
                     <p class="messageNotFound">Ingresa el texto que desees encriptar o desencriptar.</p>
-                </section>
+                </div>
             </div>
             <div class="separacioncopiar">
-                <button disabled class="btn copiar" id="btnCopiar" onclick="copiar();">Copiar</button>
+                <button class="btn copiar hidden" id="btnCopiar" onclick="copiar();">Copiar</button>
             </div>
         </section>
     </main>
